@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+body,html{
+    background-color: black;
+    height: 100%;
+    color: white;
+}
 
 table {
     font-family: arial, sans-serif;
@@ -10,16 +15,18 @@ table {
   }
   
   td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #fff;
     text-align: left;
     padding: 8px;
   }
   
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
 
   .error{
     color: red;
     font-weight: bold;
+  }
+
+  .page-wrapper{
+    width: 50%;
+    margin: 0 auto;
   }

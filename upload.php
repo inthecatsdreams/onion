@@ -14,9 +14,9 @@ if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] === UPLOA
     $dest_path = $uploadFileDir . $newFileName;
 
     if (move_uploaded_file($fileTmpPath, $dest_path)) {
-        $message = 'File is successfully uploaded.<br>';
+        $message = '<p>File has been successfully uploaded.<br></p>';
     } else {
-        $message = 'There was some error moving the file to upload directory. Please make sure the upload directory is writable by web server. <br>';
+        $message = "<p class='error'>There was some error moving the file to the upload directory.</p><br>";
     }
     echo $message;
 }
@@ -24,7 +24,7 @@ if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] === UPLOA
 <html>
 
 <body>
-
+    <div class="page-wrapper">
     <form action="" method="POST" enctype="multipart/form-data">
         <input type="file" name="uploadedFile" />
         <input type="submit" />
@@ -57,6 +57,8 @@ if (isset($_FILES['uploadedFile']) && $_FILES['uploadedFile']['error'] === UPLOA
         ?>
         </tr>
     </table>
+    </div>
+    
 </body>
 
 </html>
