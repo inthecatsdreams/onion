@@ -1,6 +1,6 @@
 <?php
 
-echo "homepage.php";
+include_once 'header.php';
 
 ?>
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ echo "homepage.php";
 </head>
 <body>
     <div class="nav">
-    <a href="/onion/gallery.php"> browse pictures</a>
+    <a href="/onion/upload.php"> browse pictures (<?php echo count(list_files("uploaded_files")) . " files uploaded so far"; ?>)</a>
 
     </div>
 </body>
